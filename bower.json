@@ -1,8 +1,15 @@
 {
 	"name": "letak",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"authors": [
 		"RobertSasak <robert.sasak@gmail.com>"
+	],
+	"keywords": [
+		"javascript",
+		"leafletjs",
+		"map",
+		"tiles",
+		"static"
 	],
 	"main": "dist/letak.min.js",
 	"license": "MIT"
