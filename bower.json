@@ -1,0 +1,9 @@
+{
+	"name": "letak",
+	"version": "0.0.0",
+	"authors": [
+		"RobertSasak <robert.sasak@gmail.com>"
+	],
+	"main": "dist/letak.min.js",
+	"license": "MIT"
+}

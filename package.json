@@ -1,0 +1,28 @@
+{
+  "name": "letak",
+  "version": "0.0.1",
+  "description": "Think of leaflet for static maps with no features.",
+  "homepage": "https://github.com/RobertSasak/letak",
+  "main": "src/letak.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobertSasak/letak.git"
+  },
+  "keywords": [
+    "javascript",
+    "leafletjs",
+    "map",
+    "tiles",
+    "static"
+  ],
+  "author": "Robert Sasak",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.1",
+    "gulp-uglify": "^1.0.1"
+  }
+}
