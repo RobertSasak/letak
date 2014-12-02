@@ -33,6 +33,7 @@
 
 		container = typeof container === 'string' ? document.getElementById(container) : container;
 		container.style.maxWidth = 256 * width + 'px';
+		container.style['font-size'] = 0;
 		container.style.position = 'relative';
 		for (l in layers) {
 			var layer = layers[l];
@@ -47,6 +48,7 @@
 				for (i = 0; i < width; i++) {
 					img = new Image();
 					img.style.width = 100 / width + '%';
+					img.style.height = 100 / width + '%';
 					img.src = layer.urlTemplate
 						.replace('{x}', x + i + offset[0])
 						.replace('{y}', y + j + offset[1])
