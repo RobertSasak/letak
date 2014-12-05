@@ -33,7 +33,7 @@
 
 		container = typeof container === 'string' ? document.getElementById(container) : container;
 		container.style.maxWidth = 256 * width + 'px';
-		container.style['font-size'] = 0;
+		container.style.fontSize = 0;
 		container.style.position = 'relative';
 		for (l in layers) {
 			var layer = layers[l];
@@ -71,7 +71,7 @@
 			style.width = '10px';
 			style.height = '10px';
 			style.margin = '-10px';
-			style['border-radius'] = '50%';
+			style.borderRadius = '50%';
 			style.background = '#000';
 			container.appendChild(pinElement);
 		}

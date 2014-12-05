@@ -1,6 +1,6 @@
 {
   "name": "letak",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Think of leaflet for static maps with no features.",
   "homepage": "https://github.com/RobertSasak/letak",
   "main": "src/letak.js",
