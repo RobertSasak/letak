@@ -36,27 +36,29 @@
 		container.style.fontSize = 0;
 		container.style.position = 'relative';
 		for (l in layers) {
-			var layer = layers[l];
-			var layerElement = document.createElement('div');
-			layerElement.style.opacity = layer.opacity || 1;
-			if (l > 0) {
-				layerElement.style.position = 'absolute';
-				layerElement.style.top = 0;
-				layerElement.style.left = 0;
-			}
-			for (j = 0; j < height; j++) {
-				for (i = 0; i < width; i++) {
-					img = new Image();
-					img.style.width = 100 / width + '%';
-					img.style.height = 100 / width + '%';
-					img.src = layer.urlTemplate
-						.replace('{x}', x + i + offset[0])
-						.replace('{y}', y + j + offset[1])
-						.replace('{z}', zoom);
-					layerElement.appendChild(img);
+			if (layers.hasOwnProperty(l)) {
+				var layer = layers[l];
+				var layerElement = document.createElement('div');
+				layerElement.style.opacity = layer.opacity || 1;
+				if (l > 0) {
+					layerElement.style.position = 'absolute';
+					layerElement.style.top = 0;
+					layerElement.style.left = 0;
 				}
+				for (j = 0; j < height; j++) {
+					for (i = 0; i < width; i++) {
+						img = new Image();
+						img.style.width = 100 / width + '%';
+						img.style.height = 100 / width + '%';
+						img.src = layer.urlTemplate
+							.replace('{x}', x + i + offset[0])
+							.replace('{y}', y + j + offset[1])
+							.replace('{z}', zoom);
+						layerElement.appendChild(img);
+					}
+				}
+				container.appendChild(layerElement);
 			}
-			container.appendChild(layerElement);
 		}
 
 		if (pin) {
