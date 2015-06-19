@@ -5,7 +5,14 @@ Very tiny (<1kb not gzip) static maps.
 ### Install
 	
 	bower install --save letak
+### Examples
 
+#### Basic 
+http://htmlpreview.github.io/?https://github.com/RobertSasak/letak/blob/master/examples/bgOnly.html
+
+#### With Overlay
+http://htmlpreview.github.io/?https://github.com/RobertSasak/letak/blob/master/examples/simple.html
+ 
 ### Usage ###
 
    	Letak('idOftheDiv', {
