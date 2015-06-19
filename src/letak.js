@@ -49,7 +49,7 @@
 					for (i = 0; i < width; i++) {
 						img = new Image();
 						img.style.width = 100 / width + '%';
-						img.style.height = 100 / width + '%';
+						//img.style.height = 100 / width + '%';
 						img.src = layer.urlTemplate
 							.replace('{x}', x + i + offset[0])
 							.replace('{y}', y + j + offset[1])
