@@ -18,7 +18,7 @@
 		return ((tileIndex - sideLength) >> 1) + tileIndex % 2;
 	}
 
-	window.Letak = function (container, options) {
+	Letak = function (container, options) {
 		var lat = options.lat || 0,
 			lng = options.lng || 0,
 			zoom = options.zoom || 5,
