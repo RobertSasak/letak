@@ -1,4 +1,4 @@
-(function (window, document, Math) {
+(function (window, document, Math, that) {
 	'use strict';
 
 	function lat2tile(lat, zoom) {
@@ -18,7 +18,7 @@
 		return ((tileIndex - sideLength) >> 1) + tileIndex % 2;
 	}
 
-	Letak = function (container, options) {
+	that.Letak = function (container, options) {
 		var lat = options.lat || 0,
 			lng = options.lng || 0,
 			zoom = options.zoom || 5,
@@ -78,4 +78,4 @@
 			container.appendChild(pinElement);
 		}
 	};
-})(window, document, Math);
+})(window, document, Math, this);
