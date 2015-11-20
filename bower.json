@@ -1,6 +1,6 @@
 {
 	"name": "letak",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Think of leaflet for static maps with no features.",
 	"authors": [
 		"RobertSasak <robert.sasak@gmail.com>"
