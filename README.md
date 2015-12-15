@@ -1,10 +1,13 @@
 ## Letak ##
 
-Very tiny (<1kb not gzip) static maps.
+Very tiny (<1kb not gzip) static JS map library.
 
 ### Install
 	
-	bower install --save letak
+	```bower install --save letak```
+	
+	```npm install --save letak```
+
 ### Examples
 
 #### Basic 

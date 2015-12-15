@@ -1,24 +1,23 @@
-(function (window, document, Math, that) {
-	'use strict';
+function Letak(container, options) {
+	(function (document, Math) {
 
-	function lat2tile(lat, zoom) {
-		var t = lat * Math.PI / 180;
-		return (1 - Math.log(Math.tan(t) + 1 / Math.cos(t)) / Math.PI) / 2 * Math.pow(2, zoom);
-	}
-
-	function lng2tile(lon, zoom) {
-		return (lon + 180) / 360 * Math.pow(2, zoom);
-	}
-
-	function get(f, latOrLng, zoom, sideLength) {
-		if (sideLength % 2 === 1) {
-			return Math.floor(f(latOrLng, zoom)) - (sideLength - 1) / 2;
+		function lat2tile(lat, zoom) {
+			var t = lat * Math.PI / 180;
+			return (1 - Math.log(Math.tan(t) + 1 / Math.cos(t)) / Math.PI) / 2 * Math.pow(2, zoom);
 		}
-		var tileIndex = Math.floor(f(latOrLng, zoom + 1));
-		return ((tileIndex - sideLength) >> 1) + tileIndex % 2;
-	}
 
-	that.Letak = function (container, options) {
+		function lng2tile(lon, zoom) {
+			return (lon + 180) / 360 * Math.pow(2, zoom);
+		}
+
+		function get(f, latOrLng, zoom, sideLength) {
+			if (sideLength % 2 === 1) {
+				return Math.floor(f(latOrLng, zoom)) - (sideLength - 1) / 2;
+			}
+			var tileIndex = Math.floor(f(latOrLng, zoom + 1));
+			return ((tileIndex - sideLength) >> 1) + tileIndex % 2;
+		}
+
 		var lat = options.lat || 0,
 			lng = options.lng || 0,
 			zoom = options.zoom || 5,
@@ -77,5 +76,6 @@
 			style.background = '#000';
 			container.appendChild(pinElement);
 		}
-	};
-})(window, document, Math, this);
+
+	})(document, Math);
+}
