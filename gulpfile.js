@@ -7,6 +7,8 @@ var gulp = require('gulp'),
 gulp.task('build', function () {
 	return gulp.src('src/letak.js')
 		.pipe(umd())
+		.pipe(concat('letak.js'))
+		.pipe(gulp.dest('dist/'))
 		.pipe(uglify({
 			unsafe: true,
 			hoist_vars: true
