@@ -10,6 +10,10 @@ Very tiny (<1kb not gzip) static JS map library.
 
 ### Examples
 
+```
+python -m SimpleHTTPServer
+```
+
 #### Basic 
 http://htmlpreview.github.io/?https://github.com/RobertSasak/letak/blob/master/examples/bgOnly.html
 
