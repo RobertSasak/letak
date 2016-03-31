@@ -26,6 +26,8 @@ function Letak(container, options) {
 			layers = options.layers || [],
 			offset = options.offset || [0, 0],
 			pin = options.pin,
+			pinLat = options.pinLat || lat,
+			pinLng = options.pinLng || lng,
 			x = get(lng2tile, lng, zoom, width),
 			y = get(lat2tile, lat, zoom, height),
 			i, j, l, img, layer;
@@ -62,8 +64,8 @@ function Letak(container, options) {
 
 		if (pin) {
 			var pinElement = document.createElement('div');
-			var pinx = lng2tile(lng, zoom);
-			var piny = lat2tile(lat, zoom);
+			var pinx = lng2tile(pinLng, zoom);
+			var piny = lat2tile(pinLat, zoom);
 			pinElement.className = 'pin';
 			var style = pinElement.style;
 			style.position = 'absolute';
