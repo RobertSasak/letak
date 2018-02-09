@@ -32,10 +32,11 @@ http://htmlpreview.github.io/?https://github.com/RobertSasak/letak/blob/master/e
 		offset: [-2, 0], // in tiles
 		layers:[{
 			urlTemplate: 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
-			opacity: 1
+			opacity: 1,
+			tms: false,
 		},{
 			urlTemplate: 'http://tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png',
-				opacity:1
+			opacity:1,
 		}]
 	});
 

@@ -29,7 +29,7 @@ function Letak(container, options) {
 
 		var lat = options.lat || 0,
 			lng = options.lng || 0,
-			zoom = options.zoom || 5,
+			zoom = options.zoom == undefined ? 5: options.zoom,
 			width = options.width || 3,
 			height = options.height || 3,
 			layers = options.layers || [],
@@ -62,7 +62,7 @@ function Letak(container, options) {
 						//img.style.height = 100 / width + '%';
 						img.src = layer.urlTemplate
 							.replace('{x}', x + i + offset[0])
-							.replace('{y}', y + j + offset[1])
+							.replace('{y}', layer.tms ? ((1<<zoom) - y - 1 - j - offset[1]) : y + j + offset[1])
 							.replace('{z}', zoom);
 						layerElement.appendChild(img);
 					}
